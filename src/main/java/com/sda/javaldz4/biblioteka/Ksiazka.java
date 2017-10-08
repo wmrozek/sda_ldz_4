@@ -73,17 +73,16 @@ public class Ksiazka implements Comparable<Ksiazka>{
 
         Ksiazka ksiazka = (Ksiazka) o;
 
-        return compareTo(ksiazka) == 0;
+        return isbn.equals(ksiazka.isbn);
     }
 
     @Override
     public int hashCode() {
-        int result = liczbaStron.hashCode();
-        return result;
+        return isbn.hashCode();
     }
 
     @Override
     public int compareTo(Ksiazka o) {
-        return this.tytul.compareTo(o.tytul);
+        return this.liczbaStron.compareTo(o.liczbaStron);
     }
 }
