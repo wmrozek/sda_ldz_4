@@ -12,8 +12,33 @@ public class Persona {
     private Plec plec;
     private String zawod;
     private LocalDate dataUrodzenia;
+    private Integer zarobki;
 
     public Persona() {
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", wiek=" + wiek +
+                ", miasto='" + miasto + '\'' +
+                ", ulica='" + ulica + '\'' +
+                ", kodPocztowy='" + kodPocztowy + '\'' +
+                ", plec=" + plec +
+                ", zawod='" + zawod + '\'' +
+                ", dataUrodzenia=" + dataUrodzenia + '\'' +
+                ", zarobki=" + zarobki +
+                '}';
+    }
+
+    public Integer getZarobki() {
+        return zarobki;
+    }
+
+    public void setZarobki(Integer zarobki) {
+        this.zarobki = zarobki;
     }
 
     public String getImie() {
@@ -86,5 +111,9 @@ public class Persona {
 
     public void setDataUrodzenia(LocalDate dataUrodzenia) {
         this.dataUrodzenia = dataUrodzenia;
+    }
+
+    public static void zmienNazwisko(Persona persona, String noweNazwisko){
+        persona.nazwisko = noweNazwisko;
     }
 }
